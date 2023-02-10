@@ -1,9 +1,42 @@
-function isPalindrome(word) {
-  // Write your algorithm here
+// function isPalindrome(word) {
+//     let wordArray = [...word]
+//     let ansArray = []
+
+//     for (let i = wordArray.length -1; i >= 0; i--){
+//         ansArray.push(wordArray[i])
+
+//     }
+
+//     for (let i = wordArray.length -1; i>=0; i--){
+//         if (ansArray[i] !== wordArray[i]){
+//             return false;
+//         }
+//     }
+//     return true
+// }
+
+function reverseString(string){
+  return [...string].reverse().join("")
+}
+
+function isPalindrome(string) {
+  reverseWord = reverseString(string)
+  return string === reverseWord
 }
 
 /* 
-  Add your pseudocode here
+  input data = string
+  output = boolean
+
+  test if word forward is the same as word reverse
+
+  need method / function / logic to reverse string
+    - String object does not have any reverse methods
+    - however, array object does (Array.prototype.reverse())
+      - convert string to an array
+      - reverse array method
+      - join the word and return result
+  
 */
 
 /*
